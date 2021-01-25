@@ -1,0 +1,21 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "1441c338-17df-4a3b-9130-b89c62470575",
+    "name": "credscan-decorator",
+    "friendlyName": "credscan-decorator",
+    "description": "CredScan Pipeline Decorator",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Vinny Martins",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 9
+    },
+    "instanceNameFormat": "",    
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "manifestVersion": 1,
+    "id": "credscan-decorator",
+    "name": "CredScan Pipeline Decorator",
+    "version": "0.1.9",
+    "publisher": "vinima",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Injects CredScan into pipelines",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "template.yml",
+            "addressable": true,
+            "contentType": "text/plain"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "credscan-prebuild",
+            "type": "ms.azure-pipelines.pipeline-decorator",
+            "targets": [
+                "ms.azure-pipelines-agent-job.post-checkout-tasks"
+            ],
+            "properties": {
+                "template": "template.yml"
+            }
+        }
+    ]
+}
